@@ -6,7 +6,7 @@ import ApplicationFail from "./pages/ApplicationFail";
 import ServerError from "./pages/ServerError";
 import Home from './pages/Home'
 import { useState } from "react";
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/Navbar';
 
 function App() {
   const [student, setStudent] = useState({

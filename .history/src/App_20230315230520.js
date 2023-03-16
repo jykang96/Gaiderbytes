@@ -4,9 +4,8 @@ import StudentApplication from "./pages/StudentApplication";
 import ApplicationSuccess from "./pages/ApplicationSuccess";
 import ApplicationFail from "./pages/ApplicationFail";
 import ServerError from "./pages/ServerError";
-import Home from './pages/Home'
 import { useState } from "react";
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navbar';
 
 function App() {
   const [student, setStudent] = useState({
@@ -55,10 +54,10 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar/>
-        <div className="pt-[75px] px-[10%]">
+        <div className="pt-[75px]">
           <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/student-application" element={<StudentApplication onSave={handleSave} student={student} />} />
+          <Route exact path="/"/>
+          <Route exact path="/studentApplication" element={<StudentApplication onSave={handleSave} student={student} />} />
           <Route exact path="/success" element={<ApplicationSuccess/>} />
           <Route exact path="/fail" element={<ApplicationFail/>} />
           <Route exact path="/serverError" element={<ServerError/>} />
